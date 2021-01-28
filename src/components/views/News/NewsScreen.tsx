@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Content from "./Content";
 import Navbar from "./Navbar";
 const NewsScreen: React.FC = () => {
@@ -9,6 +10,9 @@ const NewsScreen: React.FC = () => {
           src="https://mk0gkcity5058p9mp0g.kinstacdn.com/wp-content/uploads/2017/01/GK-logo-normal.png"
           alt="gk-logo"
         />
+        <Link to="/" className="news__return">
+          Regresar
+        </Link>
       </header>
       <div className="news__content-container">
         <Navbar />

@@ -9,6 +9,17 @@
   padding: 1rem 0;
   display: flex;
   justify-content: center;
+  position: relative;
+  .news__return {
+    position: absolute;
+    align-self: center;
+    right: 10px;
+    text-decoration: none;
+    @include button(#fff);
+    color: $primary;
+    border-radius: 0.3rem;
+    padding: 1rem;
+  }
 }
 
 .news__content-container {

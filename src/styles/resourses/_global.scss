@@ -1,0 +1,29 @@
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  #root {
+    height: 100vh;
+  }
+}
+@media (max-width: $tablet) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $phone) {
+  html {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,129 @@
+.dashboard__main {
+  display: grid;
+  grid: 1fr / 20% 80%;
+  height: 100vh;
+}
+
+.sidebar__main {
+  display: grid;
+  grid: 50px auto / 1fr;
+  padding: 0.7rem;
+  background-color: $dark-gray;
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+
+  .appBar {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar__cards {
+    width: 100%;
+    max-height: 70px;
+    background-color: white;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    transition: background-color 300ms ease;
+    animation: zoomIn 400ms ease-in-out;
+    h4 {
+      width: 100%;
+      max-height: 60px;
+      text-transform: capitalize;
+      color: $primary;
+      font-size: 1.2rem;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      background-color: darken($color: white, $amount: 10);
+    }
+  }
+}
+
+.dashboard__main-content {
+  display: flex;
+  flex-direction: column;
+
+  .dashboard__navbar {
+    background-color: $primary;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .dashboard__preview {
+      position: absolute;
+      align-self: center;
+      right: 10px;
+      text-decoration: none;
+      @include button(#fff);
+      color: $primary;
+      border-radius: 0.3rem;
+      padding: 1rem;
+    }
+  }
+
+  .dashboard__form-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 70%;
+
+    input,
+    textarea {
+      @include input;
+      width: 100%;
+    }
+
+    .dashboard__label {
+      width: 100%;
+    }
+    #label__grow {
+      height: 80%;
+    }
+
+    .dashboard__textarea {
+      resize: none;
+      height: 100%;
+    }
+
+    .form__button {
+      @include button($primary);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.3rem;
+      &:disabled {
+        background-color: $light-gray;
+      }
+    }
+    @media (max-width: $phone) {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .dashboard__main {
+    grid: 1fr/1fr;
+  }
+  .sidebar__main {
+    display: none;
+  }
+
+  .dashboard__preview {
+  }
+}

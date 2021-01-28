@@ -12,7 +12,7 @@ const AppRoutes = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={DashBoardScreen} />
-        <Route path="/news/:newsId" component={NewsScreen} />
+        <Route exact path="/news/:newsId" component={NewsScreen} />
         <Redirect to="/" />
       </Switch>
     </Router>
